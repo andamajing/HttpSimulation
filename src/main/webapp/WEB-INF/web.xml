@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+  <display-name>HttpSimulationTool</display-name>
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <listener>
+  	<listener-class>com.tools.simulation.listener.ContextListener</listener-class>
+  </listener>
+  
+  <servlet>
+  	<servlet-name>simulationServlet</servlet-name>
+  	<servlet-class>com.tools.simulation.servlet.SimulationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>simulationServlet</servlet-name>
+  	<url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+  	<session-timeout>8000</session-timeout>
+  </session-config>
+
+</web-app>

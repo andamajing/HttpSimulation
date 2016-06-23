@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<component id="test">
+		<interface id="test">
+			<encrypt>false</encrypt>
+			<encryptmode>des</encryptmode>
+			<encryptkey>123456</encryptkey>
+			<compress>false</compress>
+			<compressmode>gzip</compressmode>
+			<response rate="50,50" cacheable="true">
+				<headers>
+					<header>
+						<name>Content-Type</name>
+						<value>application/json</value>
+					</header>
+				</headers>
+				<responsetags>
+					<responsetag>D:/majing/Data/testdata/simulation1.txt</responsetag>
+					<responsetag>D:/majing/Data/testdata/simulation2.txt</responsetag>
+				</responsetags>
+			</response>
+		</interface>
+	</component>
+</config>
